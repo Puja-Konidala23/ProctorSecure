@@ -1,0 +1,6 @@
+{
+  "name": "Secure College Examination & Proctoring Portal",
+  "description": "Full-stack real-time college examination portal with anti-malpractice detection engine, sandboxed coding compiler, AI question generation, and granular teacher/admin dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
