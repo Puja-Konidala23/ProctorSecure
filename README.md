@@ -143,39 +143,6 @@ This allows teachers to review suspicious events after or during an examination.
 
 ---
 
-##  System Architecture
-
-```text
-                    ┌──────────────────────┐
-                    │      Student         │
-                    │   Web Application    │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │    React Frontend    │
-                    │  Exam + Proctoring   │
-                    └──────────┬───────────┘
-                               │ REST API
-                               ▼
-                    ┌──────────────────────┐
-                    │    Spring Boot       │
-                    │      Backend         │
-                    └──────────┬───────────┘
-                               │
-                ┌──────────────┼──────────────┐
-                ▼              ▼              ▼
-        ┌─────────────┐ ┌────────────┐ ┌─────────────┐
-        │   MySQL     │ │ AI Service │ │ Code Runner │
-        │  Database   │ │            │ │    API      │
-        └─────────────┘ └────────────┘ └─────────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   Teacher/Admin      │
-                    │      Dashboard       │
-                    └──────────────────────┘
-```
 
 ---
 Complete Stack
@@ -188,56 +155,9 @@ Authentication: JWT, bcrypt
 Proctoring: WebRTC, Fullscreen API, Page Visibility API
 Analytics: Recharts
 Version Control: Git, GitHub
----
 
-##  Project Structure
 
-```text
-smart-exam-monitoring-system/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── layouts/
-│   │   ├── services/
-│   │   ├── hooks/
-│   │   ├── utils/
-│   │   └── App.tsx
-│   │
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.ts
-│
-├── backend/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   └── resources/
-│   │
-│   ├── pom.xml
-│   └── README.md
-│
-├── database/
-│   ├── schema.sql
-│   └── seed.sql
-│
-├── docs/
-│   ├── architecture/
-│   └── screenshots/
-│
-├── README.md
-└── .gitignore
-```
 
-> Update the folder structure above if your actual repository structure is different.
-
----
-
-## Examination Workflow
-
-```text
 Student Login
      ↓
 Dashboard
